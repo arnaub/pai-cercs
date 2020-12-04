@@ -1,8 +1,8 @@
 {
-  "name": "ntn-boilerplate",
+  "name": "plataforma-anti-incineradora-de-cercs",
   "version": "1.0.0",
-  "description": "Nuxt-Tailwind-NetlifyCMS boilerplate",
-  "author": "Sven Parker <sven@svenparker.com> (https://svenparker.com)",
+  "description": "",
+  "author": "",
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/knogobert/ntn-boilerplate#readme"
+    "url": "https://https://github.com/arnaub/pai-cercs#readme"
   },
   "license": "MIT",
   "dependencies": {
@@ -22,7 +22,6 @@
     "@nuxtjs/color-mode": "^1.1.1",
     "@nuxtjs/pwa": "^3.0.2",
     "@nuxtjs/svg": "^0.1.12",
-    "@nuxtjs/tailwindcss": "^3.1.0",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
     "netlify-cli": "^2.64.1",
@@ -31,8 +30,6 @@
     "postcss-import": "^12.0.1",
     "postcss-nesting": "^7.0.1",
     "postcss-preset-env": "^6.7.0",
-    "prettier": "^1.16.4",
-    "tailwindcss": "^1.8.10",
-    "tailwindcss-dark-mode": "^1.1.6"
+    "prettier": "^1.16.4"
   }
 }

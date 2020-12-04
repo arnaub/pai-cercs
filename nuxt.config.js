@@ -58,7 +58,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['@/assets/css/tailwind.css', '@/assets/css/main.pcss'],
+  css: ['@/assets/css/main.pcss'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -66,7 +66,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/tailwindcss', '@nuxtjs/svg', '@nuxtjs/pwa'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/svg', '@nuxtjs/pwa'],
   /*
    ** Nuxt.js modules
    */
@@ -82,7 +82,6 @@ export default {
     postcss: {
       plugins: {
         'postcss-import': postcssImport,
-        tailwindcss: path.resolve(__dirname, './tailwind.config.js'),
         'postcss-nesting': postcssNesting,
         'postcss-preset-env': postcssPresetEnv({
           stage: 1,
@@ -96,13 +95,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  /*
-   ** Custom additions configuration
-   */
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-    exposeConfig: false // enables `import { theme } from '~tailwind.config'`
   },
   purgeCSS: {
     mode: 'postcss',

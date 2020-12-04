@@ -1,17 +1,19 @@
 <template>
-  <nav class="">
-    <ul class="flex fixed top-0 inset-x-0 p-3">
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/">Home</nuxt-link>
-      </li>
-      <li class="flex-1 mr-2">
-        <nuxt-link class="btn block" to="/blog">Blog</nuxt-link>
-      </li>
-      <li class="flex-1">
-        <nuxt-link class="btn block" to="/projects">Projects</nuxt-link>
-      </li>
-    </ul>
-  </nav>
+  <header class="header">
+    <nav class="navigation">
+      <ul class="menu">
+        <li class="menu__item">
+          <nuxt-link class="btn block" to="/">Home</nuxt-link>
+        </li>
+        <li class="menu__item">
+          <nuxt-link class="btn block" to="/blog">Notícies</nuxt-link>
+        </li>
+        <li class="menu__item">
+          <nuxt-link class="btn block" to="/projects">Documents</nuxt-link>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
 <script>
@@ -21,18 +23,28 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-.nuxt-link-exact-active {
-  @apply text-accent-100 bg-accent bg-opacity-20;
-  &:hover {
-    @apply text-white bg-accent-600;
-  }
+.header {
+  width: 100%;
+  height: 60px;
+  position: sticky;
+  background: rgba(255,255,255,0.5);
 }
-.light-mode {
-  & .nuxt-link-exact-active {
-    @apply text-accent-600;
-    &:hover {
-      @apply text-white;
-    }
-  }
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.menu__item {
+  display: inline-block;
+  height: 60px;
+  line-height: 60px;
+  font-size: 1em;
+  padding: 0 2em;
+}
+
+.nuxt-link-exact-active {
+  color: var(--primary-color);
+  &:after
 }
 </style>
