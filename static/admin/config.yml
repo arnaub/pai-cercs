@@ -49,6 +49,26 @@ collections:
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'documents'
+    label: 'Documents'
+    folder: 'assets/content/documents'
+    create: true
+    format: 'json'
+    slug: '{{document_type}}-{{slug}}'
+    editor:
+      preview: true
+    fields:
+      - {
+          label: 'Document Type',
+          name: 'document_type',
+          widget: 'select',
+          default: 'story',
+          options: [{ label: 'Story', value: 'story' }, { label: 'Photo', value: 'photo' }],
+        }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'File', name: 'file', widget: 'file' }
+      - { label: 'Publish Date', name: 'date', widget: 'date' }
   - name: 'projects'
     # identifier_field: name
     label: 'Projects'
