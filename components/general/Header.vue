@@ -24,23 +24,21 @@ export default {
 
 <style lang="postcss" scoped>
 .header {
-  width: 100%;
-  height: 60px;
-  position: sticky;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
   background: rgba(255,255,255,0.5);
 }
 
-.menu {
-  display: flex;
-  justify-content: flex-end;
-}
-
 .menu__item {
-  display: inline-block;
+  display: block;
   height: 60px;
   line-height: 60px;
   font-size: 1em;
-  padding: 0 2em;
 }
 
 .nuxt-link-exact-active {
