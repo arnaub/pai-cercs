@@ -1,7 +1,7 @@
 <template>
   <main
     v-if="documentPosts"
-    class="main"
+    class="content"
   >
     <h1 class="title">Documents</h1>
     <ul>

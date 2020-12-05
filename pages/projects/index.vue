@@ -1,7 +1,7 @@
 <template>
   <main
     v-if="projectPosts"
-    class="main"
+    class="content"
   >
     <h1 class="title text-left">Projects</h1>
     <ul
