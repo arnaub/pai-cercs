@@ -1,5 +1,8 @@
 <template>
   <div class="content">
+    <Highlight :text="highlightText" />
+    <Boxes :title="title" :description="description" :boxes="boxes" />
+    <Highlight :text="highlightText" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
   </div>
@@ -8,10 +11,12 @@
 <script>
 
 import Boxes from '~/components/sections/Boxes'
+import Highlight from '~/components/sections/Highlight'
 
 export default {
   components: {
-    Boxes
+    Boxes,
+    Highlight
   },
   head() {
     return {
@@ -20,6 +25,7 @@ export default {
   },
   data() {
     return {
+      highlightText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula.",
       title: "TITLE",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.",
       boxes: [
