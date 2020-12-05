@@ -9,7 +9,7 @@
           <nuxt-link class="btn block" to="/blog">Notícies</nuxt-link>
         </li>
         <li class="menu__item">
-          <nuxt-link class="btn block" to="/projects">Documents</nuxt-link>
+          <nuxt-link class="btn block" to="/documents">Documents</nuxt-link>
         </li>
       </ul>
     </nav>
