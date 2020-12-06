@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 left-0 m-3">
+  <div class="icon-mode">
     <component :is="`icon-${color}`" @click="changeColorMode" title="Toggle background color" />
   </div>
 </template>
@@ -58,6 +58,15 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.icon-mode {
+  position: fixed;
+  bottom: 1em;
+  left: 1em;
+  z-index: 900;
+  border: 4px solid var(--primary-color);
+  padding: 5px;
+  border-radius: 10px;
+}
 .icon {
   width: 44px;
   height: 44px;
