@@ -42,7 +42,7 @@ export default {
 }
 
 .nuxt-link-exact-active {
-  color: var(--quinary-color);
+  color: var(--highlight);
   &:after
 }
 </style>

@@ -2,6 +2,7 @@
   <div class="content">
     <Highlight :text="highlightText" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
+    <TwoColumns :title="title" :description="description" />
     <Highlight :text="highlightText" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
@@ -12,11 +13,13 @@
 
 import Boxes from '~/components/sections/Boxes'
 import Highlight from '~/components/sections/Highlight'
+import TwoColumns from '~/components/sections/TwoColumns'
 
 export default {
   components: {
     Boxes,
-    Highlight
+    Highlight,
+    TwoColumns
   },
   head() {
     return {
