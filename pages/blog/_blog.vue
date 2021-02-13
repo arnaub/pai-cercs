@@ -1,14 +1,14 @@
 <template>
   <article
     v-if="blogPost"
-    class="main article"
+    class="content"
   >
     <h1 class="article-title">{{ blogPost.title }}</h1>
     <h6
+      class="article-date"
       v-if="blogPost.date"
-      class="inline-block py-1 px-2 my-2 bg-accent text-white font-medium rounded-sm dark:bg-accent whitespace-no-wrap"
     >{{ formatDate(blogPost.date) }}</h6>
-    <div v-html="$md.render(blogPost.body)" />
+    <div class="article-content" v-html="$md.render(blogPost.body)" />
   </article>
 </template>
 <script>
@@ -23,8 +23,28 @@ export default {
   methods: {
     formatDate(dateString) {
       const date = new Date(dateString)
-      return date.toLocaleDateString(process.env.lang) || ''
+      return date.toLocaleDateString("es") || ''
     }
   }
 }
 </script>
+<style lang="postcss" scoped>
+  .article-title{
+    font-size: var(--extra-big-text-size);
+    margin-top: var(--gap);
+    text-transform: uppercase;
+  }
+  .article-date {
+    font-size: var(--small-text-size);
+    margin-bottom: var(--gap);
+  }
+  .article-content >>> p {
+    margin-bottom: var(--gap);
+    line-height: var(--big-text-size);
+    text-align: justify;
+  }
+
+  .article-content >>> img {
+    max-width: 100%;
+  }
+</style>
