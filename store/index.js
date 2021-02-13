@@ -7,7 +7,7 @@ export const state = () => ({
 
 export const mutations = {
   [SET_BLOG_POSTS](state, list) {
-    state.blogPosts = list
+    state.blogPosts = list.sort((a, b) => (a.date > b.date) ? -1 : 0)
   },
   [SET_PROJECT_POSTS](state, list) {
     state.projectPosts = list
