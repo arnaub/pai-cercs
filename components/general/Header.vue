@@ -26,7 +26,9 @@ export default {
 .header {
   display: flex;
   flex-direction: column;
-  width: 100px;
+  box-sizing: border-box;
+  padding-left: 0.5em;
+  width: 120px;
   height: 100vh;
   position: fixed;
   top: 0;
