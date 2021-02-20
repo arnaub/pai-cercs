@@ -1,7 +1,6 @@
 <template>
   <div class="content">
-    <text-and-image />
-    <Highlight :text="highlightText" />
+    <TextAndImage />
     <Boxes :title="title" :description="description" :boxes="boxes" />
     <TwoColumns :title="title" :description="description" />
     <Highlight :text="highlightText" />
