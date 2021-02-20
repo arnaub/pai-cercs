@@ -2,7 +2,7 @@
   <div class="content">
     <TextAndImage />
     <Boxes :title="title" :description="description" :boxes="boxes" />
-    <TextAndImage />
+    <ImageAndHighlight />
     <TwoColumns :title="title" :description="description" />
   </div>
 </template>
@@ -11,6 +11,7 @@
 
 import Boxes from '~/components/sections/Boxes'
 import Highlight from '~/components/sections/Highlight'
+import ImageAndHighlight from '~/components/sections/ImageAndHighlight.vue'
 import TextAndImage from '~/components/sections/TextAndImage.vue'
 import TwoColumns from '~/components/sections/TwoColumns'
 
@@ -19,12 +20,8 @@ export default {
     Boxes,
     Highlight,
     TwoColumns,
-    TextAndImage
-  },
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
-    }
+    TextAndImage,
+    ImageAndHighlight
   },
   data() {
     return {
