@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <text-and-image />
     <Highlight :text="highlightText" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
     <TwoColumns :title="title" :description="description" />
@@ -13,13 +14,15 @@
 
 import Boxes from '~/components/sections/Boxes'
 import Highlight from '~/components/sections/Highlight'
+import TextAndImage from '~/components/sections/TextAndImage.vue'
 import TwoColumns from '~/components/sections/TwoColumns'
 
 export default {
   components: {
     Boxes,
     Highlight,
-    TwoColumns
+    TwoColumns,
+    TextAndImage
   },
   head() {
     return {
