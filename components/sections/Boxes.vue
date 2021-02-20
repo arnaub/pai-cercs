@@ -1,12 +1,8 @@
 <template>
   <section>
-    <div class="section-info">
-      <h2 class="section-title">{{title}}</h2>
-      <p class="section-description">{{description}}</p>
-    </div>
     <div class="section-box" :class="colorClass(index)" v-for="(box, index) in boxes" :key="index">
-      <h5>{{box.title}}</h5>
-      <p>{{box.text}}</p>
+      <h3 class="box-title">{{box.title}}</h3>
+      <p class="box-description">{{box.text}}</p>
     </div>
   </section>
 </template>
@@ -30,12 +26,7 @@ section {
   margin-bottom: var(--big-gap);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--small-gap);
-}
-
-.section-info {
-  grid-column-start: 1;
-  grid-column-end: span 2;
+  gap: var(--gap);
 }
 
 .section-title {
@@ -47,31 +38,14 @@ section {
   font-size: var(--big-text-size);
 }
 
-.section-box {
-  border-radius: 5px;
-  padding: var(--small-gap);
-  background: var(--primary-color);
-  height: 12rem;
-}
-.section-box.primary{
-  background: var(--primary-color);
-}
-
-.section-box.secondary{
-  background: var(--secondary-color);
-}
-
-.section-box.tertiary{
-  background: var(--tertiary-color);
-}
-
-.section-box.quaternary{
-  background: var(--quaternary-color);
-}
-
-
-.section-box h5 {
+.box-title {
   margin: var(--small-gap) 0;
+  font-size: var(--big-text-size);
+}
+.box-description {
+  font-size: var(--text-size);
+  line-height: var(--big-text-size);
+  text-align: justify;
 }
 
 

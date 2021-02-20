@@ -1,15 +1,17 @@
 <template>
-  <section class="two-columns">
-    <div class="column column-left">
-      <h2 class="column-title">Indigenous Cultural Safety & Cultural Humility</h2>
-      <p class="column-paragraph">{{description}}</p>
-      <p class="column-paragraph">{{description}}</p>
-      <p class="column-paragraph">{{description}}</p>
-    </div>
-    <div class="column column-right">
-      <p class="column-paragraph">{{description}}</p>
-      <p class="column-paragraph">{{description}}</p>
-      <p class="column-paragraph">{{description}}</p>
+  <section class="columns">
+    <h2 class="column-title">Indigenous Cultural Safety & Cultural Humility</h2>
+    <div class="two-columns">
+      <div class="column column-left">
+        <p class="column-paragraph">{{description}}</p>
+        <p class="column-paragraph">{{description}}</p>
+        <p class="column-paragraph">{{description}}</p>
+      </div>
+      <div class="column column-right">
+        <p class="column-paragraph">{{description}}</p>
+        <p class="column-paragraph">{{description}}</p>
+        <p class="column-paragraph">{{description}}</p>
+      </div>
     </div>
   </section>
 </template>
@@ -22,24 +24,25 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.columns {
+  margin: var(--big-gap) 0;
+}
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap)
 }
 
 .column {
   box-sizing: border-box;
   width: 100%;
-  padding: var(--gap);
-  background: var(--primary-color);
+  text-align: justify;
 }
 
 .column-paragraph {
   margin-bottom: var(--small-gap);
-}
-
-.column-right {
-  background: var(--quaternary-color);
+  line-height: 1.5;
+  font-size: var(--text-size);
 }
 
 .column-title {

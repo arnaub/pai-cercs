@@ -1,11 +1,10 @@
 <template>
   <div class="content">
-    <Highlight :text="highlightText" />
+    <TextAndImage />
+    <HighLightPost :highlightPost="highlightPost" v-if="highlightPost" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
+    <ImageAndHighlight />
     <TwoColumns :title="title" :description="description" />
-    <Highlight :text="highlightText" />
-    <Boxes :title="title" :description="description" :boxes="boxes" />
-    <Boxes :title="title" :description="description" :boxes="boxes" />
   </div>
 </template>
 
@@ -13,17 +12,23 @@
 
 import Boxes from '~/components/sections/Boxes'
 import Highlight from '~/components/sections/Highlight'
+import ImageAndHighlight from '~/components/sections/ImageAndHighlight.vue'
+import TextAndImage from '~/components/sections/TextAndImage.vue'
 import TwoColumns from '~/components/sections/TwoColumns'
+import HighLightPost from '~/components/posts/HighLightPost'
 
 export default {
   components: {
     Boxes,
     Highlight,
-    TwoColumns
+    TwoColumns,
+    TextAndImage,
+    ImageAndHighlight,
+    HighLightPost
   },
-  head() {
-    return {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+  computed: {
+    highlightPost() {
+      return this.$store.state.blogPosts[0];
     }
   },
   data() {
@@ -42,10 +47,6 @@ export default {
         },
         {
           title: "third Box",
-          text: "Mauris id posuere turpis. Donec quis est ut nulla consectetur vulputate. Quisque nec elit arcu. Duis gravida massa id magna feugiat rhoncus. Morbi dapibus ac enim a luctus."
-        },
-        {
-          title: "fourth Box",
           text: "Mauris id posuere turpis. Donec quis est ut nulla consectetur vulputate. Quisque nec elit arcu. Duis gravida massa id magna feugiat rhoncus. Morbi dapibus ac enim a luctus."
         }
       ]
