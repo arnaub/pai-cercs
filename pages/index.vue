@@ -1,5 +1,6 @@
 <template>
   <div class="content">
+    <HighLightPost :highlightPost="highlightPost" v-if="highlightPost" />
     <TextAndImage />
     <Boxes :title="title" :description="description" :boxes="boxes" />
     <ImageAndHighlight />
@@ -14,6 +15,7 @@ import Highlight from '~/components/sections/Highlight'
 import ImageAndHighlight from '~/components/sections/ImageAndHighlight.vue'
 import TextAndImage from '~/components/sections/TextAndImage.vue'
 import TwoColumns from '~/components/sections/TwoColumns'
+import HighLightPost from '~/components/posts/HighLightPost'
 
 export default {
   components: {
@@ -21,7 +23,13 @@ export default {
     Highlight,
     TwoColumns,
     TextAndImage,
-    ImageAndHighlight
+    ImageAndHighlight,
+    HighLightPost
+  },
+  computed: {
+    highlightPost() {
+      return this.$store.state.blogPosts[0];
+    }
   },
   data() {
     return {

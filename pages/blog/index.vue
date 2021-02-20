@@ -7,9 +7,9 @@
     <div class="articles-list">
       <div class="article-hightligh">
         <iframe class="hightligh-media" src="https://www.youtube.com/embed/lnMqz5KOznw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <nuxt-link :to="`blog/${hightlighPost.slug}`">
-          <h2>{{hightlighPost.title}}</h2>
-          <p>{{hightlighPost.description}}</p>
+        <nuxt-link :to="`blog/${highlightPost.slug}`">
+          <h2>{{highlightPost.title}}</h2>
+          <p>{{highlightPost.description}}</p>
         </nuxt-link>
       </div>
       <ArticleItem
@@ -57,7 +57,7 @@ export default {
     blogPosts() {
       return this.$store.state.blogPosts
     },
-    hightlighPost() {
+    highlightPost() {
       return this.$store.state.blogPosts[0];
     }
   },
