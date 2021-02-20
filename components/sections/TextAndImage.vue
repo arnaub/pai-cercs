@@ -3,6 +3,8 @@
     <div class="section-info">
       <h2 class="section-title">Lorem ipsum dolor sit amet</h2>
       <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
+      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
+      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
     </div>
     <div class="section-image">
       <NuclearPlant/>
@@ -61,7 +63,7 @@ export default {
 .text-image-wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  margin: var(--gap) 0;
+  margin: var(--big-gap) 0;
 }
 .section-info {
   grid-column-start: 0;
@@ -71,6 +73,12 @@ export default {
 .section-description {
   line-height: 1.5em;
   text-align: justify;
+  font-size: var(--text-size);
+  margin-bottom: var(--small-gap);
+}
+
+.section-description:last-child {
+  margin-bottom: 0;
 }
 
 .section-image {

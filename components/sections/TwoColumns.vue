@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="columns">
     <h2 class="column-title">Indigenous Cultural Safety & Cultural Humility</h2>
     <div class="two-columns">
       <div class="column column-left">
@@ -24,6 +24,9 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
+.columns {
+  margin: var(--big-gap) 0;
+}
 .two-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -39,6 +42,7 @@ export default {
 .column-paragraph {
   margin-bottom: var(--small-gap);
   line-height: 1.5;
+  font-size: var(--text-size);
 }
 
 .column-title {

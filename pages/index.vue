@@ -2,10 +2,8 @@
   <div class="content">
     <TextAndImage />
     <Boxes :title="title" :description="description" :boxes="boxes" />
+    <TextAndImage />
     <TwoColumns :title="title" :description="description" />
-    <Highlight :text="highlightText" />
-    <Boxes :title="title" :description="description" :boxes="boxes" />
-    <Boxes :title="title" :description="description" :boxes="boxes" />
   </div>
 </template>
 
@@ -44,10 +42,6 @@ export default {
         },
         {
           title: "third Box",
-          text: "Mauris id posuere turpis. Donec quis est ut nulla consectetur vulputate. Quisque nec elit arcu. Duis gravida massa id magna feugiat rhoncus. Morbi dapibus ac enim a luctus."
-        },
-        {
-          title: "fourth Box",
           text: "Mauris id posuere turpis. Donec quis est ut nulla consectetur vulputate. Quisque nec elit arcu. Duis gravida massa id magna feugiat rhoncus. Morbi dapibus ac enim a luctus."
         }
       ]
