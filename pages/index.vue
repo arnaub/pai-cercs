@@ -1,7 +1,7 @@
 <template>
   <div class="content">
-    <HighLightPost :highlightPost="highlightPost" v-if="highlightPost" />
     <TextAndImage />
+    <HighLightPost :highlightPost="highlightPost" v-if="highlightPost" />
     <Boxes :title="title" :description="description" :boxes="boxes" />
     <ImageAndHighlight />
     <TwoColumns :title="title" :description="description" />
