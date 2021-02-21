@@ -14,9 +14,9 @@
         </li>
       </ul>
       <ul class="social-media">
-        <li class="social-item"><a target="blank" href="https://twitter.com/pcercs"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
-        <li class="social-item"><a target="blank" href="https://www.instagram.com/plataformacercs/"><font-awesome-icon :icon="['fab', 'instagram']" /></a></li>
-        <li class="social-item"><a target="blank" href="https://www.youtube.com/channel/UCphzBQDH2A1ee65fVefJabQ/featured"><font-awesome-icon :icon="['fab', 'youtube']" /></a></li>
+        <li class="social-item"><a class="social-link" target="blank" href="https://twitter.com/pcercs"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
+        <li class="social-item"><a class="social-link" target="blank" href="https://www.instagram.com/plataformacercs/"><font-awesome-icon :icon="['fab', 'instagram']" /></a></li>
+        <li class="social-item"><a class="social-link" target="blank" href="https://www.youtube.com/channel/UCphzBQDH2A1ee65fVefJabQ/featured"><font-awesome-icon :icon="['fab', 'youtube']" /></a></li>
       </ul>
     </nav>
     <div class="color-wrapper">
@@ -76,8 +76,15 @@ export default {
 }
 .social-item {
   margin-bottom: var(--small-gap);
-  font-size: 2rem;
   text-align: center;
+}
+
+.social-link {
+  width: 2em;
+  height: 2em;
+  font-size: 1.8em;
+  margin: 0 auto;
+  display: block;
 }
 
 .color-wrapper {
