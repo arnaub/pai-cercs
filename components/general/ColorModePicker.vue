@@ -59,16 +59,14 @@ export default {
 
 <style lang="postcss" scoped>
 .icon-mode {
-  position: fixed;
-  bottom: 1em;
-  left: 1em;
-  z-index: 900;
-  border: 4px solid var(--primary-color);
-  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.5em;
+  border: 2px solid var(--primary-color);
   border-radius: 10px;
 }
 .icon {
-  width: 44px;
-  height: 44px;
+  width: 100%;
+  height: auto;
 }
 </style>

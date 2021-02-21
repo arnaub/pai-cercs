@@ -1,6 +1,7 @@
 <template>
   <header class="header">
     <nav class="navigation">
+      <img src="img/logo.jpg" class="logo" />
       <ul class="menu">
         <li class="menu__item">
           <nuxt-link class="btn block" to="/">Home</nuxt-link>
@@ -12,13 +13,26 @@
           <nuxt-link class="btn block" to="/documents">Documents</nuxt-link>
         </li>
       </ul>
+      <ul class="social-media">
+        <li class="social-item"><a target="blank" href="https://twitter.com/pcercs"><font-awesome-icon :icon="['fab', 'twitter']" /></a></li>
+        <li class="social-item"><a target="blank" href="https://www.instagram.com/plataformacercs/"><font-awesome-icon :icon="['fab', 'instagram']" /></a></li>
+        <li class="social-item"><a target="blank" href="https://www.youtube.com/channel/UCphzBQDH2A1ee65fVefJabQ/featured"><font-awesome-icon :icon="['fab', 'youtube']" /></a></li>
+      </ul>
     </nav>
+    <div class="color-wrapper">
+      <ColorModePicker />
+    </div>
   </header>
 </template>
 
 <script>
+import ColorModePicker from '~/components/general/ColorModePicker.vue'
+
 export default {
-  name: 'Header'
+  name: 'Header',
+  components: {
+    ColorModePicker
+  }
 }
 </script>
 
@@ -27,24 +41,50 @@ export default {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  padding-left: 0.5em;
   width: 120px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(255,255,255,0.5);
+  background: white;
+}
+.logo {
+  display: block;
+  width: var(--gap);
+  margin: var(--small-gap) auto;
+}
+
+.menu {
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .menu__item {
   display: block;
-  height: 60px;
-  line-height: 60px;
-  font-size: 1em;
+  margin-bottom: var(--extra-small-gap);
+  font-size: 1.2rem;
+  text-align: center;
 }
 
 .nuxt-link-exact-active {
   color: var(--highlight);
   &:after
+}
+
+.social-media {
+  margin-top: var(--big-gap);
+}
+.social-item {
+  margin-bottom: var(--small-gap);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.color-wrapper {
+  width: 50%;
+  position: absolute;
+  bottom: var(--small-gap);
+  left: 50%;
+  transform: translateX(-50%);
 }
 </style>

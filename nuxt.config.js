@@ -66,7 +66,7 @@ export default {
   /*
    ** Nuxt.js dev-modules
    */
-  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/svg', '@nuxtjs/pwa', 'nuxt-animejs'],
+  buildModules: ['@nuxtjs/color-mode', '@nuxtjs/svg', '@nuxtjs/pwa', 'nuxt-animejs', '@nuxtjs/fontawesome'],
   /*
    ** Nuxt.js modules
    */
@@ -110,6 +110,14 @@ export default {
       options: {
         sameSite: 'lax'
       }
+    }
+  },
+  /*
+   ** Fontawesome
+  */
+  fontawesome: {
+    icons: {
+      brands: ['faInstagram', 'faYoutube', 'faTwitter']
     }
   },
   pwa: {
