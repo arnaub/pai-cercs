@@ -6,7 +6,7 @@
       <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
       <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
     </div>
-    <div class="section-image">
+    <div class="section-image animate">
       <NuclearPlant/>
     </div>
   </section>
@@ -25,7 +25,7 @@ export default {
     animateIcon() {
       const anime = this.$anime
       anime({
-        targets: '.st26',
+        targets: '.animate .st26',
         opacity: [
           {value: 1, duration: 4000, delay: 0},
           {value: 0, duration: 8000, delay: 8000}
@@ -38,7 +38,7 @@ export default {
         endDelay: 10000,
       })
       anime({
-        targets: '.st113',
+        targets: '.animate .st113',
         opacity: [
           {value: 1, duration: 2000, delay: 0},
         ],

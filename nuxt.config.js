@@ -98,6 +98,7 @@ export default {
   },
   purgeCSS: {
     mode: 'postcss',
+    content: ['*.svg'],
     whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
     whitelistPatterns: [/^article/, /image$/]
   },
