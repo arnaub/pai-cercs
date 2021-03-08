@@ -70,7 +70,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/markdownit', 'nuxt-purgecss'],
+  modules: ['@nuxtjs/markdownit'],
   markdownit: {
     injected: true
   },
@@ -95,12 +95,6 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
-  },
-  purgeCSS: {
-    mode: 'postcss',
-    content: ['**/*.vue', '**/*.svg'],
-    whitelist: ['dark-mode', 'light-mode', 'btn', 'icon', 'main'],
-    whitelistPatterns: [/^article/, /image$/]
   },
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
