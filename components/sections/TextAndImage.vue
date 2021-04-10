@@ -2,54 +2,26 @@
   <section class="text-image-wrapper">
     <div class="section-info">
       <h2 class="section-title">Lorem ipsum dolor sit amet</h2>
-      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
-      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
-      <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tempor, tortor eget ultricies lobortis, quam mi fermentum diam, feugiat dapibus erat ante et nulla. Quisque eu lacinia ligula. Proin tincidunt congue mauris, sit amet eleifend nisl egestas sit amet. Praesent rutrum quam in augue porttitor, malesuada aliquet enim lacinia.</p>
+      <p class="section-description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut lao- reet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p>
+      <p class="section-description">Quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat.</p>
+      <p class="section-description">Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
     </div>
-    <div class="section-image animate">
-      <NuclearPlant/>
+    <div class="section-image">
+
+      <AnimatedNuclear v-if="$colorMode.value === 'dark'" />
+      <AnimatedForest v-else/>
     </div>
   </section>
 </template>
 
 <script>
-import NuclearPlant from '~/components/icons/central.svg?inline'
+import AnimatedForest from '~/components/sections/AnimatedForest'
+import AnimatedNuclear from '~/components/sections/AnimatedNuclear'
+
 export default {
   components: {
-    NuclearPlant
-  },
-  mounted() {
-    this.animateIcon()
-  },
-  methods: {
-    animateIcon() {
-      const anime = this.$anime
-      anime({
-        targets: '.animate .st26',
-        opacity: [
-          {value: 1, duration: 4000, delay: 0},
-          {value: 0, duration: 8000, delay: 8000}
-        ],
-        translateX: -300,
-        scaleX: 1.05,
-        duration: 20000,
-        easing: 'linear',
-        loop: true,
-        endDelay: 10000,
-      })
-      anime({
-        targets: '.animate .st113',
-        opacity: [
-          {value: 1, duration: 2000, delay: 0},
-        ],
-        translateX: -1000,
-        scaleX: 1.05,
-        duration: 400000,
-        easing: 'linear',
-        loop: true,
-        endDelay: 4000,
-      })
-    }
+    AnimatedForest,
+    AnimatedNuclear
   },
 }
 </script>
@@ -72,7 +44,6 @@ export default {
 
 .section-description {
   line-height: 1.5em;
-  text-align: justify;
   font-size: var(--text-size);
   margin-bottom: var(--small-gap);
 }
@@ -82,11 +53,7 @@ export default {
 }
 
 .section-image {
-  grid-column-start: 8;
-  grid-column-end: span 5;
-}
-
-.st26, .st113 {
-  opacity: 0;
+  grid-column-start: 7;
+  grid-column-end: span 6;
 }
 </style>
