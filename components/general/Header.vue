@@ -41,13 +41,21 @@ export default {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  width: 120px;
+  width: 0;
+  overflow: hidden;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   background: white;
+  @media only screen and (min-width: 992px) {
+    width: 120px;
+  }
 }
+.header.open {
+  width: 100%;
+}
+
 .logo {
   display: block;
   width: var(--gap);
