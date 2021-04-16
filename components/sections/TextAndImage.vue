@@ -7,7 +7,6 @@
       <p class="section-description">Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
     </div>
     <div class="section-image">
-
       <AnimatedNuclear v-if="$colorMode.value === 'dark'" />
       <AnimatedForest v-else/>
     </div>
@@ -53,6 +52,7 @@ export default {
 }
 
 .section-image {
+  padding-left: var(--small-gap);
   grid-column-start: 7;
   grid-column-end: span 6;
 }
